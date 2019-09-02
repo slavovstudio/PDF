@@ -9,22 +9,16 @@ Require this package in your `composer.json` or install it by running:
 composer require slavovstudio/lumen-pdf
 ```
 
-> Note: This package supports auto-discovery features of Lumen , You only need to manually add the service provider and alias if working on Lumen version lower then 5.5
+> Note: This package supports auto-discovery features of Lumen , You only need to manually add the service provider and alias
 
-To start using Lumen, add the Service Provider and the Facade to your `config/app.php`:
+To start using, add the Service Provider and the Facade to your `bootstrap/app.php`:
 
 ```php
-'providers' => [
-	// ...
-	slavovstudio\LumenlPdf\PdfServiceProvider::class
-]
+class_alias('slavovstudio\LumenPdf\Facades\Pdf', 'PDF');
 ```
 
 ```php
-'aliases' => [
-	// ...
-	'PDF' => slavovstudio\LumenPdf\Facades\Pdf::class
-]
+$app->register(slavovstudio\LumenPdf\PdfServiceProvider::class);
 ```
 
 Now, you should publish package's config file to your config directory by using following command:
