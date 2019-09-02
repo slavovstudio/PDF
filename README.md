@@ -1,6 +1,4 @@
-# Laravel PDF: mPDF wrapper for Laravel 5
-
-> Easily generate PDF documents from HTML right inside of Laravel using this mPDF wrapper.
+# Lumen PDF: mPDF wrapper for Lumen Easily generate PDF documents from HTML right inside of Lumen using this mPDF wrapper.
 
 
 ## Installation
@@ -8,24 +6,24 @@
 Require this package in your `composer.json` or install it by running:
 
 ```
-composer require niklasravnsborg/laravel-pdf
+composer require slavovstudio/lumen-pdf
 ```
 
-> Note: This package supports auto-discovery features of Laravel 5.5+, You only need to manually add the service provider and alias if working on Laravel version lower then 5.5
+> Note: This package supports auto-discovery features of Lumen , You only need to manually add the service provider and alias if working on Lumen version lower then 5.5
 
-To start using Laravel, add the Service Provider and the Facade to your `config/app.php`:
+To start using Lumen, add the Service Provider and the Facade to your `config/app.php`:
 
 ```php
 'providers' => [
 	// ...
-	niklasravnsborg\LaravelPdf\PdfServiceProvider::class
+	slavovstudio\LumenlPdf\PdfServiceProvider::class
 ]
 ```
 
 ```php
 'aliases' => [
 	// ...
-	'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class
+	'PDF' => slavovstudio\LumenPdf\Facades\Pdf::class
 ]
 ```
 
@@ -37,7 +35,7 @@ php artisan vendor:publish
 
 ## Basic Usage
 
-To use Laravel PDF add something like this to one of your controllers. You can pass data to a view in `/resources/views`.
+To use Lumen PDF add something like this to one of your controllers. You can pass data to a view in `/resources/views`.
 
 ```php
 use PDF;
@@ -69,8 +67,8 @@ return [
 	'format'           => 'A4', // See https://mpdf.github.io/paging/page-size-orientation.html
 	'author'           => 'John Doe',
 	'subject'          => 'This Document will explain the whole universe.',
-	'keywords'         => 'PDF, Laravel, Package, Peace', // Separate values with comma
-	'creator'          => 'Laravel Pdf',
+	'keywords'         => 'PDF, Lumen, Package, Peace', // Separate values with comma
+	'creator'          => 'Lumen Pdf',
 	'display_mode'     => 'fullpage'
 ];
 ```
@@ -145,7 +143,7 @@ return [
 ];
 ```
 
-*Note*: If you are using `laravel-pdf` for producing PDF documents in a complicated language (like Persian, Arabic or Chinese) you should have `useOTL` and `useKashida` indexes in your custom font definition array. If you do not use these indexes, your characters will be shown dispatched and incorrectly in the produced PDF.
+*Note*: If you are using `lumen-pdf` for producing PDF documents in a complicated language (like Persian, Arabic or Chinese) you should have `useOTL` and `useKashida` indexes in your custom font definition array. If you do not use these indexes, your characters will be shown dispatched and incorrectly in the produced PDF.
 
 Now you can use the font in CSS:
 
@@ -189,4 +187,4 @@ brew install ghostscript
 
 ## License
 
-Laravel PDF is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Lumen PDF is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
