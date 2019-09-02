@@ -2,8 +2,9 @@
 
 namespace slavovstudio\LumenPdf;
 
+use App\Http\Controllers\Controller; 
 use File;
-use View;
+use Illuminate\Support\Facades\View;
 
 class PdfWrapper {
 

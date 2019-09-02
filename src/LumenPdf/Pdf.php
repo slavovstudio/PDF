@@ -2,7 +2,7 @@
 
 namespace slavovstudio\LumenPdf;
 
-use Config;
+use Illuminate\Support\Facades\Config;
 use Mpdf;
 
 /**

@@ -22,9 +22,9 @@ class PdfServiceProvider extends BaseServiceProvider {
 	*/
 	public function boot()
 	{
-		$this->publishes([
-            	__DIR__ . '/../config/pdf.php' => config_path('pdf.php'),
-        	]);
+//		$this->publishes([
+//            	__DIR__ . '/../config/pdf.php' => config_path('pdf.php'),
+//        	]);
     	}
 	
 	/**
