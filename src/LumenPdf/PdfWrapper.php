@@ -1,6 +1,6 @@
 <?php
 
-namespace niklasravnsborg\LaravelPdf;
+namespace slavovstudio\LumenPdf;
 
 use File;
 use View;

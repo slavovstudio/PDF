@@ -1,6 +1,6 @@
 <?php
 
-namespace niklasravnsborg\LaravelPdf;
+namespace slavovstudio\LumenPdf;
 
 use Config;
 use Mpdf;
